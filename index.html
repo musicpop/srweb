@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>畅享微博</title>
+<link rel="stylesheet" href="styles/index.css" />
+<script src="scripts/index.js"></script> 
+<script src="scripts/move.js"></script>
+<!--[if lt IE9]> 
+<script
+src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js">
+</script>
+<![endif]-->
+<script type="text/javascript">
+function scrolls(obj){
+   var num=(obj.scrollLeft)++;
+   if(obj.scrollLeft==num){
+       obj.innerHTML+=obj.innerHTML;      
+   }
+   if(obj.scrollLeft>=obj.firstChild.offsetWidth)obj.scrollLeft=0;
+}
+window.onload=function(){
+var myMar=setInterval("scrolls(document.getElementById('gundong'))",20);
+document.getElementById('gundong').onmouseover=function(){ clearInterval(myMar) };
+document.getElementById('gundong').onmouseout=function(){ myMar=setInterval("scrolls(document.getElementById('gundong'))",20) };
+} 
+</script>
+</head>
+
+<body>
+
+<header id="global_header">
+        <!--顶部导航栏开始-->
+        <div class="header">
+              <div class="header_logo"><h1><img src="images/logo_update_02.png" width="190" height="34" alt="人人微博"/>  </h1>  </div>
+              <nav class="header_Llist">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="guangchang.html" target="_blank">广场</a></li>
+                        <li><a href="#">微群</a></li>
+                        <li><a href="#">应用</a></li>
+                        <li><a href="#">游戏</a></li>
+                    </ul>
+              </nav>
+              <div class="header_M">
+              <div class="header_Mi">
+                    <form action="" method="post" name=""><input type="text" value="请输入搜索内容" class="bb" />
+                     </form>
+                    </div>
+                     <div class="header_Ms"><a href="#"><img src="images/sou_08.gif"  /></a></div>
+              </div>
+              <div class="header_Rlist">
+                    <ul>
+                        <li><a href="#">某人</a></li>
+                        <li><a href="#">手机</a></li>
+                        <li><a href="#">消息</a></li>
+                        <li><a href="changeinfo.html" target="_blank">修改资料</a></li>
+                    </ul>
+              </div>
+        </div>
+      <!--顶部导航栏结束-->
+</header>
+<!--顶部导航部分结束-->
+    
+    <!--Begin:Banner开始-->
+	<div id="banner">
+    
+    	<!--Begin:大图模块-->
+    	<div id="show"><img src="images/banner2.jpg" alt="图片" /></div>
+        <!--End:大图模块结束-->
+        
+        <!--Begin:滚动消息模块-->
+	  <div id="msg">
+   	  		<div id="sysmsg">
+        		<div id="weiguan"></div>
+                <div id="message">
+                	<div id="tag_left"><img src="images/tag_left.png" /></div>
+                    <div id="tag_right"><img src="images/tag_right.png" /></div>
+           	  	  <div id="gundong">
+                  	<span>滚动文字消息&nbsp;&nbsp;
+                    最扯分手理由有哪些&nbsp;&nbsp; 
+                    第三届微小说大赛&nbsp;&nbsp;
+                    在天津第六天了&nbsp;&nbsp;
+                    红军哥哥？</span>
+                  </div>
+        		</div>
+			</div>
+        </div>
+        <!--End:滚动消息结束-->
+        
+        <!--Begin:注册登录模块-->
+        <div id="usrlogin">
+        	<div id="kaitong"><a href="regist.html" target="_blank"><img src="images/kaitong.jpg" alt="开通微博" border="0px" /></a></div>
+            <div id="loginbox">
+		    <form id="loginform" name="loginform"  action="" method="post">
+            	<input id="usrname" class="inputbox" name="usrname" type="text" value="请输入邮箱/会员账号/手机号"  onclick="this.focus();OnEnter(this)"
+ onmouseout="this.blur();OnExit(this);"/>
+                <input id="password" class="inputbox" name="password" type="password" value="" onclick="this.focus();OnEnter(this)"
+ onmouseout="this.blur();OnExit(this);" />
+  				<div id="auto"><input name="checkbox" type="checkbox" />下次自动登录</div>
+                    <div id="forgetpwd"><a href="password.html" target="_blank">忘记密码？</a></div>
+                    <div id="denglu"><a href="javascript:login();"><img src="images/login_button.jpg" border="0px"/></a></div>
+            </form>
+            </div>
+            <div id="fenge"></div>
+            <div id="other_login">
+            	<ul>
+                	<li><img src="images/msn_login.png" alt="MSN登陆" /><a href="#"> MSN</a><b> | </b></li>
+                    <li><img src="images/dianxin_login.png" alt="天翼登陆" /><a href="#"> 天翼</a><b> | </b></li>
+                    <li><img src="images/liantong_login.png" alt="联通登陆" /><a href="#"> 联通</a><b> | </b></li> 
+                </ul>
+            </div>
+        </div>
+        <!--End:注册登录结束-->
+    </div>
+    <!--End:Banner结束-->
+    
+    <!--Begin:主体内容开始-->
+    <div id="content">
+        
+        <div id="saying">
+        	<div id="sayframe">
+                <article id="weibo1" class="weibo"><a href="#"><img src="images/daren01.jpg" /></a>
+                	
+                    #言者无醉 HTML5 视频  
+                </article>
+                <article id="weibo2" class="weibo"><a href="#"><img src="images/daren05.jpg" /></a>
+                  #木有话说# HTML5 音频
+           	  </article>
+                <article id="weibo3" class="weibo"><a href="#"><img src="images/daren04.jpg" /></a>
+                  奇迹来自超越自我。超越来自“非理性地一跃”，那是跃向更深更真的理性，便可见识奇迹。 
+              	</article>
+                
+          </div>
+        </div>
+        <aside>
+        <section id="fav_people">
+        	<h1>达人推荐</h1>
+            <ul>
+                <li><a href="#"><img src="images/image_004.jpeg" border="0px" />刘红军</a></li>
+                <li><a href="#"><img src="images/image_005.jpeg" border="0px" />韩雪芹</a></li>
+                <li><a href="#"><img src="images/image_006.jpeg" border="0px" />李朋伟</a></li>
+                <li><a href="#"><img src="images/daren04.jpg" border="0px" />张良</a></li>
+                <li><a href="#"><img src="images/image_007.jpeg" border="0px" />刘磊</a></li>
+                <li><a href="#"><img src="images/daren06.jpg" border="0px" />党兴阳</a></li>
+                <li><a href="#"><img src="images/daren07.jpg" border="0px" />高雷亭</a></li>
+                <li><a href="#"><img src="images/image_022.jpeg" border="0px" />朱庆伟</a></li>
+                <li><a href="#"><img src="images/daren10.jpg" border="0px" />郭宝星</a></li>
+                <li><a href="#"><img src="images/image_014.jpeg" border="0px" />刘瑞雪</a></li>
+                <li><a href="#"><img src="images/image_016.jpeg" border="0px" />赵桂雄</a></li>
+                <li><a href="#"><img src="images/image_023.jpeg" border="0px" />万明东</a></
+            </ul>
+        </section>
+        <section id="play_weibo">
+        <h3>视频微博</h3>
+        
+        <div id="pic_weibo">
+        <video width="320" height="240" controls poster="images/pic_weibo.png">
+          <source src="video/movie.ogg" type="video/ogg">
+          <source src="video/movie.mp4" type="video/mp4"> 
+        </video>
+        </div>         
+        <div id="mobile"><img src="images/mobile.png" /></div>
+        </section>
+        </aside>
+    </div>
+    <!--End:主体内容结束-->
+ 
+         <!--Begin:底部信息-->
+        <footer id="footer">
+          
+             <small>Copyright 人人微博 All rights reserved.</small> 
+             <address>联系我们（QQ）:12345678	</address>  
+        
+        </footer>
+        <!--End:底部信息-->
+ 
+</body>
+</html>
